@@ -73,17 +73,13 @@ Why? because you can check the Metrics
 
 BEFORE APPLY MODEL
 
-![](Before_Analisis.jpg)
-
-
-
+![](./README_files/Before_Analysis.jpg)
 
 
 
 **************************************************
 AFTER APPLIED MODEL
-![](./README_files/After_Analisis.jpg)
-
+![](./README_files/After_Analysis.jpg)
 
 
 
