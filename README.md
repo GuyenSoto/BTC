@@ -74,6 +74,9 @@ Why? because you can check the Metrics
 BEFORE APPLY MODEL
 ![](./README_files/Before_Analisis.jpg)
 
+
+
+
 AFTER APPLIED MODEL
 ![](./README_files/After_Analisis.jpg)
 
