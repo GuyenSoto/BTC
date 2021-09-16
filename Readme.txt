@@ -1,6 +1,0 @@
-I sent you 6 documents. The first is EDA and at the same time it is the supervised learning method applied to semi learning. The rest are different methods that are normally applied to semi supervised learning, such as label propagation and label spreading, plus the autoencoders that we talked about.
-I still have to work more with the features and if I have time I will try KFOLD that is used in semi supervised learning and fastai the Deep learning Framework that brings more tools for tabular data and classification. I did not put everything else that I did with Credit Card which was quite a lot and there are some interesting things, if you want I can put it.
-I had to use Colab + there were times with Label propagation and spreading that I used almost 50GB of allocated RAM, incredible
-
-Updated
-I added Metrics and I Tried KFOLD but I did not try fastai the Deep learning Framework is too much for now 

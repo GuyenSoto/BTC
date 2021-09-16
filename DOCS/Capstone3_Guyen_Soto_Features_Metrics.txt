@@ -1,0 +1,101 @@
+Feature engineering:
+
+The final file has inside the Class column, which identifies the type of transaction in Illegal or Legal
+The "time" column can be used to select a specific time period, but I preferred to use the longest time interval in order to better assess the 
+model, finally I deleted "time" from my DataFrame.
+The rest of the columns are scaled, so I don't have the information they represent.
+
+
+	trans_feat_0	trans_feat_1	trans_feat_2 .. agg_feat_69	agg_feat_70	agg_feat_71	Class
+0	-0.171484	-0.184668	-1.201369	-0.097524	-0.120613	-0.119792	1
+
+1	-0.172107	-0.184668	-1.201369	-0.183671	-0.120613	-0.119792	0
+
+2	0.163054	1.963790	-0.646376	0.677799	-0.120613	-0.119792	0
+
+3	1.011523	-0.081127	-1.201369	1.293750	0.178136	0.179117	0
+
+4	0.961040	-0.081127	-1.201369	1.149556	-0.696053	-0.695540	0
+
+..	...	...	...	...	...	...	...	...	...	...	...	...	...
+
+203763	-0.145771	-0.163752	0.463609	-0.097524	-0.120613	-0.119792	0
+
+203764	-0.165920	-0.123607	1.018602	-0.140597	-1.760926	-1.760984	0
+
+203765	-0.172014	-0.078182	1.018602	-0.097524	-0.120613	-0.119792	1
+
+203766	-0.172842	-0.176622	1.018602	-0.140597	1.519700	1.521399	0
+
+203767	-0.012037	-0.132276	0.463609	-0.140597	1.519700	1.521399	0
+
+
+
+Metrics:
+
+
+
+Classification Report: 
+              precision    recall  f1-score   support
+
+         0.0       0.55      0.20      0.30      1017
+         1.0       0.86      0.97      0.91      5050
+
+    accuracy                           0.84      6067
+   macro avg       0.70      0.59      0.60      6067
+weighted avg       0.81      0.84      0.81      6067
+
+
+Accuracy Score:  0.8386352398219878
+
+	ROC AUC
+	ROC_AUC=roc_auc_score(val_y, clf.predict_proba(val_x)[:, 1])
+	print('ROC_AUC: {0:0.2f}'.format(ROC_AUC))
+	ROC_AUC: 0.83
+	
+	
+	FB-Score
+	F1=fbeta_score(val_y,yhat[:, 1].round(),beta=1)
+	F2=fbeta_score(val_y,yhat[:, 1].round(),beta=2)
+	F_0_5=fbeta_score(val_y,yhat[:, 1].round(),beta=0.5)
+	print('F1-score: {0:0.2f}'.format(F1),'F2-score:  {0:0.2f}'.format(F2), 'F 0.5 score:  {0:0.2f}'.format(F_0_5 ))
+	F1-score: 0.91 
+	F2-score:  0.94 
+	F_0.5 score:  0.88
+	
+	
+	F1_score
+	F1=f1_score(val_y,yhat[:, 1].round(), average=None)
+	print('F1_score: {0:0.2f}'.format(F1[1]))
+	F1_score: 0.91
+
+
+	Accuracy Score
+	AS=accuracy_score(val_y,yhat[:, 1].round())
+ 	print('Accuracy Score: {0:0.2f}'.format(AS))
+	Accuracy Score: 0.84
+
+
+	Average Precision Recall Score
+	average_precision = average_precision_score(val_y,yhat[:, 1].round())
+	print('Average precision-recall score: {0:0.2f}'.format(average_precision))
+	Average precision-recall score: 0.86
+
+
+	sensitivity1 = cnf_matrix[0,0]/(cnf_matrix[0,0]+cnf_matrix[0,1])
+	print('Sensitivity : {0:0.2f}'.format(sensitivity1 ))
+	Sensitivity : 0.30
+
+
+	This is the most important metrics to evaluate our model
+	specificity1 = cnf_matrix[1,1]/(cnf_matrix[1,0]+cnf_matrix[1,1])
+	print('Specificity : {0:0.2f}'.format(specificity1))
+	Specificity : 0.96
+
+****************************************
+
+
+
+
+
+
