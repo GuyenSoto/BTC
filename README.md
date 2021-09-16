@@ -75,14 +75,26 @@ BEFORE APPLY MODEL
 
 ![](./README_files/Before_Analisis.jpg)
 
+
+
+
+
+
 **************************************************
 AFTER APPLIED MODEL
 ![](./README_files/After_Analisis.jpg)
 
 
+
+
+
+
 Metrics for Encoders an Logistic Regression
 
 ![](./README_files/Calculate_PRC.jpg)
+
+
+
 
 ## 6. Dataset
 
