@@ -45,7 +45,7 @@ We must create a DataFrame that groups the necessary columns for this, the best 
 then we can already work with a single DataFrame
 
 
-Because all the features in our file are already processed with PCA to maintain the confidentiality of the clients. It is not necessary to clean the columns that has already been done previously.
+Because all the features in our file are already processed with Normalization to maintain the confidentiality of the clients. It is not necessary to clean the columns that has already been done previously.
 Of course, after we group the dataframes, if we must make some adjustments to keep the table operational. For example we have the fields id, time that I do not need for the ML model and txId that arose after the raw_features merge and therefore can also be eliminated.
 
 There is also a policy that I followed to be able to verify the effectiveness of the ML model and that is that the Unknown Class will obtain a value either Legal or Illegal based on a random generator that will also maintain the ratio of 1/10 between Legal and Illegal transactions that we noticed in the analysis.
